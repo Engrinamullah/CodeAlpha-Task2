@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Config -->
+  <script src="config.js"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-calc-black flex items-end justify-center min-h-screen p-4 font-sans">
+
+  <!-- Calculator Container -->
+  <div id="calculator-app" class="w-full max-w-sm bg-calc-black text-calc-text-light p-4">
+    <!-- Display Screen -->
+    <div id="display" class="w-full text-calc-text-light flex flex-col justify-end items-end mb-4">
+      <div id="current-input">0</div>
+    </div>
+
+    <!-- Buttons Grid -->
+    <div class="grid grid-cols-4 gap-3">
+      <button onclick="clearDisplay()" class="calculator-button bg-calc-util-gray text-calc-text-dark rounded-full">AC</button>
+      <button onclick="appendInput('±')" class="calculator-button bg-calc-util-gray text-calc-text-dark rounded-full">±</button>
+      <button onclick="appendInput('%')" class="calculator-button bg-calc-util-gray text-calc-text-dark rounded-full">%</button>
+      <button onclick="appendInput('÷')" class="calculator-button bg-calc-op-orange hover:bg-orange-600 rounded-full">÷</button>
+
+      <button onclick="appendInput('7')" class="calculator-button bg-calc-num-gray hover:bg-gray-700 rounded-full">7</button>
+      <button onclick="appendInput('8')" class="calculator-button bg-calc-num-gray hover:bg-gray-700 rounded-full">8</button>
+      <button onclick="appendInput('9')" class="calculator-button bg-calc-num-gray hover:bg-gray-700 rounded-full">9</button>
+      <button onclick="appendInput('×')" class="calculator-button bg-calc-op-orange hover:bg-orange-600 rounded-full">×</button>
+
+      <button onclick="appendInput('4')" class="calculator-button bg-calc-num-gray hover:bg-gray-700 rounded-full">4</button>
+      <button onclick="appendInput('5')" class="calculator-button bg-calc-num-gray hover:bg-gray-700 rounded-full">5</button>
+      <button onclick="appendInput('6')" class="calculator-button bg-calc-num-gray hover:bg-gray-700 rounded-full">6</button>
+      <button onclick="appendInput('-')" class="calculator-button bg-calc-op-orange hover:bg-orange-600 rounded-full">−</button>
+
+      <button onclick="appendInput('1')" class="calculator-button bg-calc-num-gray hover:bg-gray-700 rounded-full">1</button>
+      <button onclick="appendInput('2')" class="calculator-button bg-calc-num-gray hover:bg-gray-700 rounded-full">2</button>
+      <button onclick="appendInput('3')" class="calculator-button bg-calc-num-gray hover:bg-gray-700 rounded-full">3</button>
+      <button onclick="appendInput('+')" class="calculator-button bg-calc-op-orange hover:bg-orange-600 rounded-full">+</button>
+
+      <button onclick="appendInput('0')" class="calculator-button bg-calc-num-gray hover:bg-gray-700 rounded-full">0</button>
+      <button onclick="appendInput('00')" class="calculator-button bg-calc-num-gray hover:bg-gray-700 rounded-full">00</button>
+      <button onclick="appendInput('.')" class="calculator-button bg-calc-num-gray hover:bg-gray-700 rounded-full">.</button>
+      <button onclick="calculate()" class="calculator-button bg-calc-op-orange hover:bg-orange-600 rounded-full">=</button>
+    </div>
+  </div>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>

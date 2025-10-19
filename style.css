@@ -1,0 +1,52 @@
+/* Custom CSS to enforce circular button shape and spacing */
+.calculator-button {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  font-size: 2.25rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background-color 0.1s ease-in-out, transform 0.05s ease-in-out;
+  user-select: none;
+  cursor: pointer;
+}
+
+.calculator-button:active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+/* Special styling for the '0' button */
+.button-zero {
+  justify-content: start;
+  padding-left: 20%;
+  grid-column: span 2;
+  width: unset;
+}
+
+/* Display styles */
+#current-input {
+  font-size: 5rem;
+  font-weight: 200;
+  line-height: 1;
+  padding: 0.5rem 0;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  #calculator-app {
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+  }
+  #current-input {
+    font-size: 4rem;
+  }
+  .calculator-button {
+    font-size: 1.75rem;
+  }
+}
